@@ -1,0 +1,28 @@
+
+ <table class="table">
+   <tr>
+     <th>Name</th>
+     <th>Email</th>
+     <th>Contact</th>
+     <th>Skills</th>
+     <th>Address</th>
+   </tr>
+
+   <% @clients.each do|client| %>
+     <tr>
+       <td><%= client.name %></td> 
+       <td><%= client.email%>
+       <td><%= client.contact %>
+       <td><%= client.skills %></td>
+       <td><%= client.address %></td>
+       <td><%= link_to 'show', client_path(client) %></td>
+       <td><%= link_to  'create project', new_client_project_path(client) %></td>
+     </tr> 
+   <% end %>
+ </table>
+
+
+
+
+
+<%= link_to 'Back', home_index_path %>

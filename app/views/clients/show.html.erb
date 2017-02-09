@@ -1,0 +1,27 @@
+<strong>Name:</strong>
+<%= @client.name %>
+<br>
+<h1>Projects</h1>
+<table class="table">
+   <tr>
+     <th>Title</th>
+     <th>Description</th>
+     <th>Gems</th>
+     <th>Image</th>
+   </tr>
+
+   <% @client.projects.each do|project| %>
+     <tr>
+       <td><%= project.title %></td> 
+       <td><%= raw(project.description) %></td>
+       <td><%= project.gems.join(", ")  %></td>
+       <td><%= image_tag (project.attachment) ,:size => "50x50"%></td>
+     </tr> 
+   <% end %>
+ </table>
+<h3>Add Projects</h3>
+
+
+
+  
+

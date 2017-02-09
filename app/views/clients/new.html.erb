@@ -1,0 +1,50 @@
+<%= form_for @client do |f| %>
+ 
+  <% if @client.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@client.errors.count, "error") %> prohibited
+        this client from being saved:
+      </h2>
+      <ul>
+        <% @client.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <div class="col-lg-10">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: "form-control " %>
+  </div>
+   <br>
+ <div  class="col-lg-10">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class: "form-control col-6" %>
+  </div>
+  
+ <div  class="col-sm-10">
+    <%= f.label :contact %><br>
+    <%= f.text_field :contact,class: "form-control " %>
+ </div>
+  
+  <div class="col-xs-10">
+    <%= f.label :skills %><br>
+    <%= f.text_field :skills, 'data-role' => 'tagsinput', class: "stags" %>
+  </div>
+
+  <div  class="col-sm-10">
+    <%= f.label :address %><br>
+    <%= f.text_field :address, class: "form-control " %>
+  </div>
+ <br>
+  <div class="col-sm-10">
+    <%= f.submit  class: "btn btn-default" %>
+  </div>
+ 
+<% end %>
+<br>
+<div class="col-lg-6">
+<%= link_to 'Back', home_index_path, class: "btn btn-default" %>
+</div>
