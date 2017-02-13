@@ -1,4 +1,3 @@
-<h1>Add Project</h1>
 <%= form_for @project, :url=> client_projects_path(@client) do |f| %>
    <div class="form-group">
     <%= f.label :title %><br>
@@ -11,18 +10,15 @@
 
   <div  class="form-group">
     <%= f.label :gems %><br>
-    <%#= f.text_field :gems, 'data-role' => 'tagsinput',class: "form-control" %>
-    <%= f.text_field :gems,  id: "demo1" %>
+    <%= f.text_field :gems, 'data-role' => 'tagsinput',class: "form-control" %>
   </div>
 
-   <p>  
-      
-      <%= f.fields_for :images, @project.images.build  do |image| %>
-        <%= render 'image_fields' ,:f => image %>
-      <% end %> 
-
+   <p> 
+      <%#= f.fields_for :images do |image| %>
+        <%#= render 'image_fields' %>
+      <%# end %> 
       <div class='links'>
-       <%= link_to_add_association 'add image', f, :images %>
+      <%#= link_to_add_association 'add image', f, :images %>
     </div>   
    </p>
     <div>

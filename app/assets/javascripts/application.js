@@ -12,18 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ckeditor-jquery
+
 //= require bootstrap-tagsinput
+//= require ckeditor-jquery
 //= require twitter/bootstrap
 //= require cocoon
-//= require turbolinks
 //= require_tree .
-$('.ckeditor').ckeditor({
-  // optional config
-});
 
-$(function() {
-    $("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").tagsinput(width: '20em');
-    
-  });
-})(window.jQuery);
+ $(function() {
+  
+   $('#demo1').tagEditor({ delimiter: ', '}).css('display', 'block').attr('readonly', true);
+
+});
+            
+        

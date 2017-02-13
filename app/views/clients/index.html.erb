@@ -16,6 +16,8 @@
        <td><%= client.skills %></td>
        <td><%= client.address %></td>
        <td><%= link_to 'show', client_path(client) %></td>
+       <td><%= link_to 'Destroy', client_path(client), method: :delete,
+              data: { confirm: 'Are you sure?' }  %></td>
        <td><%= link_to  'create project', new_client_project_path(client) %></td>
      </tr> 
    <% end %>

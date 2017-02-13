@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 20170208074555) do
     t.string   "title"
     t.text     "description"
     t.string   "gems"
-    t.string   "attachment"
     t.integer  "client_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

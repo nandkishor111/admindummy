@@ -1,6 +1,3 @@
-<strong>Name:</strong>
-<%= @client.name %>
-<br>
 <h1>Projects</h1>
 <table class="table">
    <tr>
@@ -10,7 +7,7 @@
      <th>Image</th>
    </tr>
 
-   <% @client.projects.each do|project| %>
+   <% @projects.each do|project| %>
      <tr>
        <td><%= project.title %></td> 
        <td><%= raw(project.description) %></td>
@@ -26,4 +23,3 @@
      </tr> 
    <% end %>
  </table>
-<%= link_to 'show projects', client_projects_path(@client) %>

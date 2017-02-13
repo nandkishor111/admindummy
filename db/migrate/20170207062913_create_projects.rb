@@ -4,8 +4,6 @@ class CreateProjects < ActiveRecord::Migration[5.0]
       t.string :title
       t.text :description
       t.string :gems
-      t.string :attachment
-
       t.references :client, foreign_key: true
 
       t.timestamps

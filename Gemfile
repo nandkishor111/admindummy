@@ -43,7 +43,7 @@ gem 'bootstrap-tagsinput-rails'
 gem 'ckeditor_rails'
 gem 'carrierwave'
 gem "cocoon"
-
+gem 'bootstrap_tokenfield_rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

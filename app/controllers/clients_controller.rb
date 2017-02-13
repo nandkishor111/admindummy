@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
     before_action :authenticate_user! 
+     load_and_authorize_resource
     def index
    	  @clients=Client.all
     end
@@ -20,6 +21,15 @@ class ClientsController < ApplicationController
         render 'new'
       end
     end
+
+  
+
+    def destroy
+       @client = Client.find(params[:id])
+       @client.destroy
+       redirect_to clients_path, notice:  "The client #{@client.name} has been deleted."
+    end
+
     
     private 
      def client_params
